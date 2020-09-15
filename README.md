@@ -1,2 +1,5 @@
-# til
-Today I learned
+## :writing_hand: Today I learned
+
+- What I write about
+  - Everyday issues
+  - Questions
