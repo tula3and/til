@@ -1,4 +1,4 @@
-## Github blog tips
+## Rules to modify [my Github blog](https://tula3and.github.io/)
 
 - How to arrange posts as series
   - Navigation bar is on the [left top](https://stackoverflow.com/questions/12102069/whats-the-difference-between-left-top-and-top-left-in-jquery-ui-position)
