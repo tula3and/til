@@ -56,6 +56,11 @@
   print(list(map(doubling, lst))) #[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
   print(list(filter(lambda x:x%2==0, lst))) #[2, 4, 6, 8, 10]
   ```
+- `enumerate(list)`
+  ```python
+  for i, num in enumerate(list):
+      #index(i) and factor(num)
+  ```
 - `cycle(list)`
   ```python
   from itertools import cycle
@@ -70,10 +75,10 @@
 - `class class_name:`
   ```python
   class Tree:
-    root = 1
-    leaf = 100
-    def __init__(self):
-        print('bigTree')
+      root = 1
+      leaf = 100
+      def __init__(self):
+          print('bigTree')
 
   #Inheritance
   class Tree1(Tree):
@@ -96,7 +101,7 @@
   two.test()
 
   if __name__ == '__main__':
-    print('one')
+      print('one')
   ```
 - `if __name__ == '__main__':` Execute codes if running module is main.
 
@@ -121,16 +126,16 @@
 - try + except
   ```python
   try:
-    num = input()
-    print('%d' %num)
+      num = input()
+      print('%d' %num)
   except:
       print('error occurred')
   ```
 - try + except + else
   ```python
   try:
-    num = input()
-    print('%d' %num)
+      num = input()
+      print('%d' %num)
   except TypeError:
       print('TypeError occurred')
   except ValueError:
