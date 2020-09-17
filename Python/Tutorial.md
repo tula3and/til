@@ -1,15 +1,15 @@
-# Python tutorial
+## Python tutorial
 
-1. [Operator]
-2. [Dictionary]
-3. [Set]
-4. [Function]
-5. [Built-in functions]
-6. [Class]
-7. [External module]
-8. [File I/O]
-9. [Errors]
-10. [References]
+1. [Operator](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#operator)
+2. [Dictionary](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#dictionary)
+3. [Set](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#set)
+4. [Function](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#function)
+5. [Built-in functions](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#built-in-functions)
+6. [Class](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#class)
+7. [External module](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#external-module)
+8. [File I/O](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#file-io)
+9. [Errors](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#errors)
+10. [References](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#references)
 
 ## Operator
 
