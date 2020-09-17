@@ -8,8 +8,9 @@
 6. [Class](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#class)
 7. [External module](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#external-module)
 8. [File I/O](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#file-io)
-9. [Errors](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#errors)
-10. [References](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#references)
+9. [Exception handling](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#exception-handling)
+10. [Errors](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#errors)
+11. [References](https://github.com/tula3and/til/blob/master/Python/Tutorial.md#references)
 
 ## Operator
 
@@ -114,6 +115,31 @@
   - `lines = file.readlines()`
     - `type(lines)` is <class 'list'>
 - `.seek(x, 0)` Set the pointer (x is distance)
+
+## Exception handling
+
+- try + except
+  ```python
+  try:
+    num = input()
+    print('%d' %num)
+  except:
+      print('error occurred')
+  ```
+- try + except + else
+  ```python
+  try:
+    num = input()
+    print('%d' %num)
+  except TypeError:
+      print('TypeError occurred')
+  except ValueError:
+      print('ValueError occurred')
+  else:
+      print('successfully finished')
+  ```
+- try + except + finally
+- try + except + else + finally
 
 ## Errors
 
