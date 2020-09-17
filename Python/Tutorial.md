@@ -55,6 +55,14 @@
   print(list(map(doubling, lst))) #[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
   print(list(filter(lambda x:x%2==0, lst))) #[2, 4, 6, 8, 10]
   ```
+- `cycle(list)`
+  ```python
+  from itertools import cycle
+
+  #print infinitely
+  for letter in cycle(['a', 'b', 'c', 'd', 'e']):
+      print('%s' %letter)
+  ```
 
 ## Class
 
