@@ -19,3 +19,7 @@
     conda info --envs
     ```
   - `activate <name>` and `deactivate <name>`
+  - Delete virtual environments
+    ```
+    conda remove --name <name> --all
+    ```
