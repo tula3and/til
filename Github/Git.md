@@ -1,4 +1,4 @@
-## Start Git
+## Git
 
 > (For Mac, Linux) Open terminal.<br/>
 > (For Windows) Open Git Bash.<br/>
@@ -30,3 +30,6 @@
     git remote remove origin
     git remote -v
     ```
+- Standard workflow
+    - Fork → Clone → Edit → Pull request
+    - If your work has finished, don't forget `git remote remove origin`
