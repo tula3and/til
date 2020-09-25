@@ -24,6 +24,10 @@
         git push origin master
         ```
 
+- Get changes from Github
+    ```
+    git pull
+    ```
 - Delete a connection between local and remote
     ```
     git remote -v
