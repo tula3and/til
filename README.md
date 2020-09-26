@@ -1,4 +1,4 @@
-## :writing_hand: Today I learned
+## Today I learned
 
 - What I write about
   - Everyday issues
