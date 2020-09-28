@@ -36,4 +36,18 @@
     ```
 - Standard workflow
     - Fork → Clone → Edit → Pull request
+        ```
+        git clone <fork link>
+        git checkout -b <add your name>
+        git add <changed file>
+        git commit -m "<commit message>"
+        git push origin <add your name>
+        ```
+    - Move to repository on GitHub, click on that button `Compare & pull request`
     - If your work has finished, don't forget `git remote remove origin`
+    
+- Merge conflicts
+    ```
+    git remote add upstream <main source link>
+    git pull upstream master
+    ```
