@@ -20,6 +20,7 @@
     - d
       - (e * d) mod Φ(n) = 1
 - How to encrypt and decrypt
+  - Fermat's little theorem
   - Before encryption 🍎
   - After encryption 🔒
   - Encryption
