@@ -14,7 +14,7 @@
     - n = p * q (p, q are prime numbers)
     - e
       - Φ(n) = (p - 1) * (q - 1)
-      - 1 < e < Φ(n) Φ(n) (e is `relatively` prime with Φ(n))
+      - 1 < e < Φ(n) (e is `relatively` prime with Φ(n))
   - `private key`
     - n, d
     - d
