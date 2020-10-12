@@ -4,7 +4,7 @@
 - Optimization of plain recursion
   - In time complexity: from exponential to polynomial
 - Memoization
-  - Without
+  - Without: repeat same calculations
     ```c
     #include <stdio.h>
 
