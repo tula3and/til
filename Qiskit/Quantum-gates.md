@@ -13,3 +13,8 @@
   - AND(x, y) = NOT(NOT(AND(x, y))) = NOT(NAND(x, y))
   - OR(x, y) = NOT(AND(NOT(x), NOT(y))) = NAND(NOT(x), NOT(y))
   - NOT(x) = NAND(DUPE(x))
+
+## Quantum gates
+
+- Hadamard(H) gate<br/>
+![hgate](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%5Cbegin%7Bbmatrix%7D%201%20%26%201%20%5C%5C%201%20%26%20-1%20%5Cend%7Bbmatrix%7D)
