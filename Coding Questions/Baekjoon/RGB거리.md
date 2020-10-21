@@ -12,6 +12,10 @@
   ```c
   #define _CRT_SECURE_NO_WARNINGS
   #define MIN(a, b) (((a) < (b)) ? (a) : (b))
+  /*
+  smallest of three integers
+  #define MIN(x, y, z) ((x) < (y) ? ((x) < (z) ? (x) : (z)) : ((y) < (z) ? (y) : (z)));
+  */
 
   #include <stdio.h>
 
