@@ -10,12 +10,14 @@
 - 솔루션 `.sin` > 프로젝트 `.vcxproj`
 - *.c → 컴파일 → *.obj → 링크 → *.exe
   - 컴파일 오류, 링크 오류, 논리 오류
+  - 컴파일 전에 전처리기의 전처리 과정이 필요
+    - 전처리 지시자는 `#`으로 시작
 
 ## Basic structure
 
 ```c
-//for scanf(" %d", &num)
-//make a space | use getchar() for \n
+//scanf(" %d", &num)
+//make a space | use getchar()
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
@@ -31,18 +33,28 @@ int main() {
 - 매크로 상수
   - `#define` 으로 정의
   - 정의 시, 매개변수를 모두 괄호로 묶는 게 좋음
+  - 두 줄 이상일 경우, `\`으로 연결 가능
 - 식별자(identifiers): 변수 또는 함수 이름
   - 영문자, 숫자, 밑줄 `_`로 구성
   - 식별자의 첫 문자로 숫자 불가능
   - 예약어(reserved word, keyword) 사용 불가능: `auto` `default` `enum` `volatile` `union` 등
+- bool 자료형이 따로 없다. → `enum`으로 정의 가능
+  ```c
+  //FALSE == 0, TRUE == 1
+  //0, 0.0, \0 mean false
+  enum bool {FALSE. TRUE};
+  ```
 - 주석(comments): `//` 또는 `/* ... */`
 
 ## 자료형
 
-- %`<+|->` `<빈칸채울숫자>` `<전체폭>`.`<소수점아래폭>` `<d|i|f>`
+- %`<+|-|0|#>` `<전체폭>`.`<소수점아래폭>` `<d|i|f|o|x|X>`
   - `+`만 적을 경우: 우측정렬, + 출력
   - `-`만 적을 경우: 좌측정렬
-  - 둘 다 안 적을 경우: 우측정렬
+  - `0`만 적을 경우: 빈칸을 `0`으로 채움
+  - `#`만 적을 경우: 8진수 `0` 또는 16진수 `0x|0X` 서식문자가 붙음
+  - 아무것도 적을 경우: 우측정렬
+- % `<전체폭>`.`<출력문자수>`s
 - 정수형(%d)
   - short(%hd): 2 bytes
   - int: 4 bytes
@@ -64,6 +76,11 @@ int main() {
     - float 오버플로 `10^38` 이상 → `inf`
     - float 언더플로 매우 작은 수 → `0.000000`
   - double(%lf): 8 bytes
+    - 지수 표현 `1.234E+3` = `1.234 * 10^3`
+  - `#include <float.h>`
+    - float 최대 최소 매크로 상수(%e): `FLT_MAX` `FLT_MIN`
+    - double 최대 최소 매크로 상수(%e): `DBL_MAX` `DBL_MIN`
+    - long double 최대 최소 매크로 상수(%e): `LDBL_MAX` `LDBL_MIN`
 - 문자형
   - char: 1 byte
     - `문자열 길이 == 1`이면
@@ -104,6 +121,33 @@ int main() {
     ```
 
 - `Logical` &&, ||, !
+
+## 조건과 반복
+
+- `switch`: `case` 다음에 변수는 올 수 없다.
+  ```c
+  switch (num) {
+  case 1: case 4: //num == 1 || num == 4 실행
+    //statements
+    break;
+    
+  case 2:
+    //statements
+    break;
+    
+  case 3:
+    //statements
+    break;
+    
+  default:
+    printf("It doesn't match.\n");
+  }
+  ```
+- 조건 연산자 `<조건> ? 참 : 거짓`
+  ```c
+  (<조건> ? <조건>이 참일 경우 실행 : <조건>이 거짓일 경우 실행);
+  num = (<조건> ? <조건>이 참일 경우 선택 : <조건>이 거짓일 경우 선택);
+  ```
 
 ## 배열
 
