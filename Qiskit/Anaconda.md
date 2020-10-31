@@ -14,6 +14,10 @@
     conda create --name <name> python=<version>
     conda create -n <name> python=<version>
     ```
+  - Install jupyter notebook on the new environment
+    ```
+    conda install jupyter notebook
+    ```
   - Check a list of virtual environments
     ```
     conda info --envs
