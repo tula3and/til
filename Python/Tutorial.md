@@ -31,6 +31,7 @@
 ## Set
 
 - `set()`
+  - Each element is unique.
 - `add()`, `remove()`
 - `s1.union(s2)` or `s1 | s2`
 - `s1.intersection(s2)` or `s1 & s2`
