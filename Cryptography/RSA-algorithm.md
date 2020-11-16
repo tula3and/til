@@ -1,5 +1,6 @@
 ## RSA algorithm
 
+- Explained in Korean: [RSA 암호화](https://medium.com/ocol/rsa-%EC%95%94%ED%98%B8%ED%99%94-98ee453f4d85)
 - Public-key cryptography
 - John has `public key` and `private key`.
   - John is the only owner of `private key`.
@@ -34,4 +35,3 @@
 - Stability
   - Prime factorization with big numbers
   - Inverse operation of remainder operation
-
