@@ -93,14 +93,14 @@ int main() {
       - 아스키코드: 초창기 7-bit 인코딩 → 8-bit 인코딩
         - 대문자 + 32 == 소문자
       - 유니코드: 16-bit, 전 세계의 모든 문자 표기 가능
-  - 문자열 선언하기
+  - 문자열 선언하기: `[]`로 선언할 경우 문자열 바꾸는데에 문제가 없지만, `*`로 선언할 경우 한 문자만 바꾸는 건 불가능하다.
     ```c
     char string1[] = { 'h', 'e', 'l, 'l', 'o', '\0' };
     char string2[] = "hello";
     char string3[10] = "hello";
     char *string4 = "hello";
     
-    char *string5[] = { "hello", "world" };
+    char *string5[] = { "hello", "world" }; //문자열을 저장하는 포인터 배열
     char string6[][] = { "hello", "world" };
     ```
 
@@ -153,6 +153,9 @@ int main() {
 
 - 주소값 `&array[i]` == `score + i`
 - 참조값 `score[i]` == `*(score + i)`
+- 2차원 배열
+  - `arr[i]` == `*(arr + i)`
+  - 행 크기 `sizeof(arr) / sizeof(arr[0])`
 
 ## 포인터
 
@@ -182,22 +185,30 @@ int main() {
   - `*++p` == `*(++p)`
 - `const`와 `*`가 같이 있을 때
   ```c
-                                //error
-  int const *pi = &i;           //*pi = 100;
+                                //error cases
+  const int *pi = &i;           //*pi = 100;
+  i = 100;
+  
   int* const pii = &i;          //pii = &j;
+  *pii = 100;
+  
+  const int *const pi = &i;
+  
   char* const title = "hello";  //title = "world"
   ```
 - 함수를 이용해 변수에 접근할 때
   - 포인터로 접근하지 않을 경우, C에서는 기본적으로 `call by value`가 설정되어 있기 때문에 원래 값에는 변화가 없다.
   - 원래 값에 접근하려면 포인터를 이용해 `call by reference`를 구현하면 된다.
 - 함수에서 배열을 전달인자로 넘기면 실제 그 배열 메모리 전체가 함수로 넘어가지 않고, 배열의 가장 첫 번째 주소가 전달인자가 된다.
-  - 배열을 매개변수에서 선언할 때 `arr[]` 또는 `*arr`을 적는다.
+  - 배열을 매개변수에서 선언할 때 `<자료형>` + `arr[]` 또는 `*arr`을 적는다.
+    - 매개변수 선언에는 둘이 동일한 선언이다.
+    - 그 외의 선언에서는 `*ptr` != `ptr[]`
   - 배열의 이름은 포인터 변수와 동일한 역할을 한다.
   - 배열의 주소는 연결되어 있어서 첫 번째 주소값을 이용해 그 다음의 값들도 가져올 수 있다.
     - 배열에서 포인트 주소를 n 증가시키면 (n * 자료형의 크기) 만큼 커진다.
 - 배열 선언 시
-  - 배열 포인터 `(*ptr)[3]`
-  - 포인터 배열 `*ptr[3]`
+  - 배열 포인터 `int (*ptr)[3] = arr`
+  - 포인터 배열 `int *ptr[3] = {&num1, &num2, &num3}`
 - 배열 포인터를 이용해서 출력하기
   ```c
   #include <stdio.h>
@@ -224,6 +235,16 @@ int main() {
     return 0;
   }
   ```
+- 함수 포인터
+  ```c
+  int exampleFunc(int num1, int num2) { ... }
+  int (*fptr) (int, int);
+  fptr = exampleFunc;
+  fptr(100, 200); //exampleFunc(100, 200); 동일한 결과 도출
+  ```
+- void 포인터
+  - 어떠한 주소 값도 저장이 가능한 포인터
+  - 형 정보가 없기 때문에 `*ptr = 100;` 등의 `*` 연산은 불가능하다.
 
 ## 구조체
 
