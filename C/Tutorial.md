@@ -154,8 +154,9 @@ int main() {
 - 주소값 `&array[i]` == `score + i`
 - 참조값 `score[i]` == `*(score + i)`
 - 2차원 배열
-  - `arr[i]` == `*(arr + i)`
+  - (i + 1)번째 행 `arr[i]` == `*(arr + i)`
   - 행 크기 `sizeof(arr) / sizeof(arr[0])`
+  - 열 크기 `sizeof(arr[0]) / sizeof(arr[0][0])`
 
 ## 포인터
 
@@ -208,6 +209,7 @@ int main() {
     - 배열에서 포인트 주소를 n 증가시키면 (n * 자료형의 크기) 만큼 커진다.
 - 배열 선언 시
   - 배열 포인터 `int (*ptr)[3] = arr`
+    - 증감 연산자 사용 가능 `*++(*ptr++)`
   - 포인터 배열 `int *ptr[3] = {&num1, &num2, &num3}`
 - 배열 포인터를 이용해서 출력하기
   ```c
