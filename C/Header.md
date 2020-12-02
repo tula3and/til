@@ -4,6 +4,7 @@
   - `strlen()` 문자열 길이 반환
   - `memcpy(<save>, <copy>, <len>)` 문자배열 복사
   - `memchr(<where>, <char>, <len>)` `<char>` 이후의 문자열 전부 반환
+  - `strcmp(<char>, <char>)` 두 문자열이 같으면 `0` 반환
 - `#include <stdlib.h>`
   - `rand()` 0과 32767 사이의 임의의 정수 반환
     - 그러나 함수 호출 순서에 따라서 매번 일정한 수 반환
