@@ -278,6 +278,28 @@ int main() {
         return 0;
       }
         ```
+  - `typedef struct <구조체 이름> <구조체 이름>;`
+      ```c
+      #include <stdio.h>
+
+      struct person {
+        char name[15];
+        int age;
+      };
+
+      typedef struct person Person;
+      
+      int main(){
+        Person tula;
+
+        scanf("%s", tula.name);
+        scanf("%d", &tula.age);
+
+        printf("name : %s\nage : %d\n", tula.name, tula.age);
+
+        return 0;
+      }
+      ```
   - `typedef struct _<구조체 이름(생략 가능)> {} <구조체 이름>;`
       ```c
       #include <stdio.h>
