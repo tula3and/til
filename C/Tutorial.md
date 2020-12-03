@@ -273,7 +273,7 @@ int main() {
         scanf("%s", tula.name);
         scanf("%d", &tula.age);
 
-        printf("name : %s\nage : %d\n", tula.name, tula.age);
+        printf("name: %s\nage: %d\n", tula.name, tula.age);
 
         return 0;
       }
@@ -295,16 +295,16 @@ int main() {
         scanf("%s", tula.name);
         scanf("%d", &tula.age);
 
-        printf("name : %s\nage : %d\n", tula.name, tula.age);
+        printf("name: %s\nage: %d\n", tula.name, tula.age);
 
         return 0;
       }
       ```
-  - `typedef struct _<구조체 이름(생략 가능)> {} <구조체 이름>;`
+  - `typedef struct <구조체 이름(생략 가능)> {} <구조체 이름>;`
       ```c
       #include <stdio.h>
 
-      typedef struct _Person {
+      typedef struct person {
         char name[15];
         int age;
       } Person;
@@ -315,7 +315,7 @@ int main() {
         scanf("%s", tula.name);
         scanf("%d", &tula.age);
 
-        printf("name : %s\nage : %d\n", tula.name, tula.age);
+        printf("name: %s\nage: %d\n", tula.name, tula.age);
 
         return 0;
       }
@@ -338,7 +338,7 @@ int main() {
     	}
 
     	for (int i = 0; i < 3; i++) {
-    		printf("name : %s, age : %d\n", tula[i].name, tula[i].age);
+    		printf("name: %s, age: %d\n", tula[i].name, tula[i].age);
     	}
         
     	return 0;
