@@ -45,5 +45,27 @@
       }
     }
     ```
+- Scrapper
+  - Download [goquery](https://github.com/PuerkitoBio/goquery)
+  - `main` 함수
+    ```go
+    func main() {
+      var jobs []extractedJob // struct
+      var extractedJobs []extractedJob
+      c := make(chan []extractedJob)
+      totalPages := getPages() // getPages returns the number of pages
 
+      for i := 0; i < totalPages; i++ {
+        go getPage(i, c)
+      }
 
+      for i := 0; i < totalPages; i++ {
+        extractedJobs = <-c
+        // ... merges only elements of two arrays
+        jobs = append(jobs, extractedJobs...)
+      }
+      
+      writeJobs(jobs) // writeJobs makes a csv file with "encoding/csv"
+      fmt.Println("Done, extracted", len(jobs))
+    }
+    ```
