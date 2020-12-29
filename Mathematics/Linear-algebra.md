@@ -19,6 +19,7 @@
     2. Closed under multiplication: ![](https://latex.codecogs.com/gif.latex?%5Cfn_jvn%20c%5Cvec%7Bx%7D) in V
     3. Closed under addition: ![](https://latex.codecogs.com/gif.latex?%5Cfn_jvn%20%5Cvec%7Ba%7D%2C%5Cvec%7Bb%7D) in V
     ![](https://latex.codecogs.com/gif.latex?%5Cfn_jvn%20%5CRightarrow%20%5Cvec%7Ba%7D&plus;%5Cvec%7Bb%7D) in V
+  - Dimension of a subspace: the number of elements in a basis for the subspace
 - Basis: linearly independent minimum set of span subspace
   - Standard basis<br/>
   ![](https://latex.codecogs.com/gif.latex?%5Cfn_jvn%20T%20%3D%5Cleft%20%5C%7B%20%5Cbegin%7Bbmatrix%7D%201%5C%5C%200%20%5Cend%7Bbmatrix%7D%2C%20%5Cbegin%7Bbmatrix%7D%200%5C%5C%201%20%5Cend%7Bbmatrix%7D%20%5Cright%20%5C%7D)
@@ -41,11 +42,10 @@
 - Point distance to plane<br/>
 ![](https://latex.codecogs.com/gif.latex?%5Cfn_jvn%20l%20%3D%20%5Cfrac%7B%7C%5Cvec%7BAP%7D%5Ccdot%20%5Cvec%7Bn%7D%7C%7D%7B%7C%7C%5Cvec%7Bn%7D%7C%7C%7D%20%3D%20%5Cfrac%7B%7Cax_%7B1%7D&plus;by_%7B1%7D&plus;cz_%7B1%7D-d%7C%7D%7B%5Csqrt%7Ba%5E2&plus;b%5E2&plus;c%5E2%7D%7D)
   - Plane: ax + by + cz = d
-  
-
-
-
-
+- Null space `N(A)` = `N(rref(A))`
+  - dim(N(A)) = nullity(A) = the number of free variables = the number of non-pivot columns in rref
+- Column space `C(A)`
+  - dim(C(A)) = rank(A) = the number of pivot columns in rref
 
 
 
