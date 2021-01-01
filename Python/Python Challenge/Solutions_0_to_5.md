@@ -115,5 +115,24 @@
 
 ### 5. peak hell
 
+- Peak hell sounds like `pickle`
+- Use the codes below
+  ```python
+  import urllib.request # Get data as binary
+  import pickle
+
+  url = "http://www.pythonchallenge.com/pc/def/banner.p"
+  html = urllib.request.urlopen(url).read()
+  things = pickle.loads(html)
+
+  for thing in things:
+      for i in range(len(thing)):
+          what = thing[i][0]
+          how_many = thing[i][1]
+          print(what * how_many, end='')
+      print()
+  ```
+- The result looks like this: ![](https://github.com/tula3and/til/blob/master/Python/Python%20Challenge/5_result.png?raw=true)
+- Change `peak` to `channel` in the URL
 
 
