@@ -132,7 +132,8 @@
           print(what * how_many, end='')
       print()
   ```
-- The result looks like this: ![](https://github.com/tula3and/til/blob/master/Python/Python%20Challenge/5_result.png?raw=true)
+- The result looks like this:<br/>
+![](https://github.com/tula3and/til/blob/master/Python/Python%20Challenge/5_result.png?raw=true)
 - Change `peak` to `channel` in the URL
 
 
