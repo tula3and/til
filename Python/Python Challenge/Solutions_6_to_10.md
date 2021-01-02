@@ -152,11 +152,32 @@
 
 ### 10. what are you looking at?
 
--
+- Move to the [sequence page](http://www.pythonchallenge.com/pc/return/sequence.txt)
+  - `a = [1, 11, 21, 1211, 111221,` 
+  - The rule is (the number of n) + (n) + ...
+  - If there is different one, stop and count again from zero
+  - The solution
+    ```python
+    a = [1, 11, 21, 1211, 111221]
 
+    while (len(a) != 31):
+        result = ''
+        base = list(str(a[-1]))
+        start = base[0]
+        cnt = 1
+        for i in range(1, len(base)):
+            cnt += 1
+            if (start != base[i]):
+                result += str(cnt - 1)
+                result += start
+                cnt = 1
+                start = base[i]
+        result += str(cnt)
+        result += start
+        a.append(int(result))
 
-
-
-
+    print(len(str(a[30]))) # 5808
+    ```
+- Change `bull` to `5808` in the URL
 
 
