@@ -49,6 +49,37 @@
 
 ### 7. smarty
 
--
+- Download the image file and use the codes below
+  ```python
+  import cv2
+  image = cv2.imread("/oxygen.png")
 
+  print(len(image)) # 95
+  print(len(image[0])) # 629
+  print(len(image[0][0])) # 3
+
+  middle = 95 // 2
+  target = image[middle]
+  lst = []
+
+  for i in range(len(target)):
+    lst.append(target[i][0])
+
+  for i in range(len(lst)):
+     print(chr(lst[i]), end='')
+  ```
+- The result is `sssssmmmmmmmaaaaaaarrrrrrrttttttt       ggggggguuuuuuuyyyyyyy,,,,,,,       yyyyyyyooooooouuuuuuu       mmmmmmmaaaaaaadddddddeeeeeee       iiiiiiittttttt.......       ttttttthhhhhhheeeeeee       nnnnnnneeeeeeexxxxxxxttttttt       llllllleeeeeeevvvvvvveeeeeeelllllll       iiiiiiisssssss       [[[[[[[111111100000005555555,,,,,,,       111111111111110000000,,,,,,,       111111111111116666666,,,,,,,       111111100000001111111,,,,,,,       111111100000003333333,,,,,,,       111111111111114444444,,,,,,,       111111100000005555555,,,,,,,       111111111111116666666,,,,,,,       111111122222221111111]]]]]]]]GEC;67<:3:<963,-01/..`
+  - After removing duplicated letters, the actual one is `smart guy, you made it. the next level is [105, 110, 116, 101, 103, 114, 105, 116, 121]`
+- To find the answer, use the codes below
+  ```python
+  answer = [105, 110, 116, 101, 103, 114, 105, 116, 121]
+
+  for num in answer:
+    print(chr(num), end='') # integrity
+  ```
+- Change `oxygen` to `integrity` in the URL
+
+### 8. working hard?
+
+-
 
