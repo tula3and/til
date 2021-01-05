@@ -67,7 +67,45 @@
 
 ### 14. walk around
 
-- 
+- Check a hint in page source: `remember: 100*100 = (100+99+99+98) + (...`
+- Mouseover on `wire.png`: 100 × 100 pixels (intrinsic: 10000 × 1 pixels)
+  - Use `wire.png` and make a roll with it: 100 + 99 + 99 + 98 + 98 + 97 + 97 + 96 + ...
+- Use the codes below: import [Image](https://pillow.readthedocs.io/en/stable/reference/Image.html#image-module)
+  ```python
+  from PIL import Image
+
+  im = Image.open("wire.png")
+  result = Image.new(im.mode, [100,100])
+
+  direction = [(1,0), (0,1), (-1,0), (0,-1)]
+
+  fill_in = [100, 99, 99, 98]
+
+  where = (-1,0)
+  p = 0
+  while (fill_in[3] != 0):
+      for i in range(len(fill_in)):
+          num = fill_in[i]
+          for k in range(num):
+              where = where[0] + direction[i][0], where[1] + direction[i][1]
+              result.putpixel(where, im.getpixel((p,0)))
+              p += 1
+
+      for i in range(len(fill_in)):
+          fill_in[i] -= 2
+
+  result.save('14_result.png')
+  ```
+- The result looks like this:<br/>
+![](https://github.com/tula3and/til/blob/master/Python/Python%20Challenge/14_result.png?raw=true)
+- Change `italy` to `cat` in the URL
+
+### 15. uzi
+
+-
+
+
+
 
 
 
