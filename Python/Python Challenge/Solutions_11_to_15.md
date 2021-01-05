@@ -46,6 +46,28 @@
 
 ### 13. call him
 
--
+- Click number 5 on the picture
+  - There is a `xml` page: import [xmlrpc.client](https://docs.python.org/ko/3/library/xmlrpc.client.html)
+- Use the codes below
+  ```python
+  import xmlrpc.client
+
+  s = xmlrpc.client.ServerProxy('http://www.pythonchallenge.com/pc/phonebook.php')
+
+  print(s.system.listMethods())
+
+  print(s.system.methodHelp('phone'))
+  print(s.system.methodSignature('phone'))
+
+  print(s.phone('Bert')) # From evil4.jpg (not in Chrome)
+  ```
+- The result is `555-ITALY`
+  - Input `ITALY` and you can see "SMALL letters."
+- Change `disproportional` to `italy` in the URL
+
+### 14. walk around
+
+- 
+
 
 
