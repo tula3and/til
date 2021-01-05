@@ -46,7 +46,11 @@
 
 ### 17. eat?
 
--
+- Change `romance` to `cookies` in the URL
+  - yummy! chocolate chips. (means nothing)
+- The image in left corner is on [level 4](http://www.pythonchallenge.com/pc/def/linkedlist.php):
+[Solution](https://github.com/tula3and/til/blob/master/Python/Python%20Challenge/Solutions_0_to_5.md#4-follow-the-chain)
+
 
 
 
