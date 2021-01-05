@@ -99,8 +99,9 @@
 - The result looks like this:<br/>
 ![](https://github.com/tula3and/til/blob/master/Python/Python%20Challenge/14_result.png?raw=true)
 - Change `italy` to `cat` in the URL
+- Change `cat` to `uzi` in the URL
 
-### 15. uzi
+### 15. whom?
 
 -
 
