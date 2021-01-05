@@ -29,6 +29,23 @@
 
 ### 12. dealing evil
 
+- Open the page `evil1.jpg` and change it to `evil2.jpg`
+- Download `evil2.gfx` and use the codes below
+  ```python
+  file = open('evil2.gfx', 'rb')
+
+  bytes = file.read()
+
+  for i in range(5):
+      picture = open("%d.png" %i, 'wb')
+      picture.write(bytes[i::5]) # Divide into 5 in evil1.jpg
+      picture.close()
+  ```
+- The result is `disproportional`(ity - with a slash mark)
+- Enter `www.pythonchallenge.com/pc/return/disproportional.html`
+
+### 13. call him
+
 -
 
 
