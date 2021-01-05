@@ -103,10 +103,38 @@
 
 ### 15. whom?
 
--
+- We can see a calendar with a circle on 26
+  - This year is 1XX6
+  - It is a leap year: import [calendar.isleap](https://docs.python.org/ko/3/library/calendar.html#calendar.isleap) and
+  [calendar.weekday](https://docs.python.org/ko/3/library/calendar.html#calendar.weekday)
+    ```python
+    import calendar
 
+    lst = [str(i) for i in range(100)]
 
+    for i in range(10):
+        if (len(lst[i]) == 1):
+            lst[i] = '0' + lst[i]
 
+    leap_years = []
+    for i in range(len(lst)):
+        year = int('1' + lst[i] + '6')
+        if (calendar.isleap(year)):
+            leap_years.append(year)
+
+    for leap_year in leap_years:
+        if (calendar.weekday(leap_year, 1, 5) == 0):
+            print(leap_year)
+    ```
+  - The result is 1176, 1356, 1576, 1756, and 1976
+- Two clues in page source
+  - he ain't the youngest, he is the second
+    - The year is 1756
+  - todo: buy flowers for tomorrow
+    - `tomorrow` means Jan 27
+- The answer is `1756. 1. 27.`
+  - It is Mozart's birthday!
+- Change `uzi` to `mozart` in the URL
 
 
 
