@@ -46,6 +46,20 @@
   - dim(N(A)) = nullity(A) = the number of free variables = the number of non-pivot columns in rref
 - Column space `C(A)`
   - dim(C(A)) = rank(A) = the number of pivot columns in rref
+  - If (rank(A) == the dimension of codomain): the function is a surjective function
+    - Surjective function: codomain = range
+
+---
+
+- Matrix-vector products<br/>
+  - NOT satisfy the commutative property
+  - A: m x n, B: p x q, AB: m(row) x q(column) (n and p must be same)
+
+---
+
+- Projections: projection of x onto L<br/>
+![](https://latex.codecogs.com/gif.latex?%5Cfn_jvn%20Proj_%7BL%7D%28%5Cvec%7Bx%7D%29%20%3D%20%28%5Cfrac%7B%5Cvec%7Bx%7D%5Ccdot%20%5Cvec%7Bv%7D%7D%7B%5Cvec%7Bv%7D%5Ccdot%20%5Cvec%7Bv%7D%7D%29%5Ccdot%20%5Cvec%7Bv%7D%20%3D%20%28%5Cvec%7Bv%7D%5Ccdot%5Chat%7Bu%7D%29%5Ccdot%5Chat%7Bu%7D)
+
 
 
 
