@@ -33,3 +33,25 @@
 - `Bitwise` .and(`<bits>`), .or(`<bits>`), .xor(`<bits>`), .inv()
 - `Logical` &&, ||, !
 
+## Function
+
+- Can set default value
+  ```kotlin
+  fun sum(a: Int, b: Int = -1): Int {
+      var sum = a + b
+      return sum
+  }
+
+  // fun sum(a: Int, b: Int) = a + b
+  ```
+- Many values
+  ```kotlin
+  fun printValues(vararg a: Int) {
+      for (num in a) {
+          print("$num ")
+      }
+  }
+  
+  printValues(1, 2, 3, 4, 5)
+  ```
+
