@@ -51,9 +51,14 @@
 
 ---
 
-- Matrix-vector products<br/>
+- Matrix-vector products
   - NOT satisfy the commutative property
   - A: m x n, B: p x q, AB: m(row) x q(column) (n and p must be same)
+- Inverse matrix
+  - `[A|I]` → `[I|A^-1]`
+  - Determinant of 2 x 2 matrix: Det(`<matrix>`) = ad - bc != 0<br/>
+  ![](https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D%20a%20%26%20b%26%20%7C%20%26%201%20%26%200%5C%5C%20c%20%26%20d%20%26%20%7C%20%26%200%26%201%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%20a%20%26%20b%26%20%7C%20%26%201%20%26%200%5C%5C%200%20%26%20ad-bc%20%26%20%7C%20%26%20-c%26%20a%20%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%20%28ad-bc%29a%20%26%200%26%20%7C%20%26%20ad%20%26%20-ab%5C%5C%200%20%26%20ad-bc%20%26%20%7C%20%26%20-c%26%20a%20%5Cend%7Bbmatrix%7D%3D%20%5Cbegin%7Bbmatrix%7D%201%20%26%200%26%20%7C%20%26%20%5Cfrac%7Bd%7D%7Bad-bc%7D%20%26%20%5Cfrac%7B-b%7D%7Bad-bc%7D%5C%5C%200%20%26%201%20%26%20%7C%20%26%20%5Cfrac%7B-c%7D%7Bad-bc%7D%26%20%5Cfrac%7Ba%7D%7Bad-bc%7D%20%5Cend%7Bbmatrix%7D)
+  
 
 ---
 
