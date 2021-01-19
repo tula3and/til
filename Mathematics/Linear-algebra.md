@@ -58,6 +58,8 @@
   - `[A|I]` → `[I|A^-1]`
   - Determinant of 2 x 2 matrix: Det(`<matrix>`) = ad - bc != 0<br/>
   ![](https://latex.codecogs.com/gif.latex?%5Cfn_jvn%20%5Cbegin%7Bbmatrix%7D%20a%20%26%20b%26%20%7C%20%26%201%20%26%200%5C%5C%20c%20%26%20d%20%26%20%7C%20%26%200%20%26%201%20%5Cend%7Bbmatrix%7D%3D%20%5Cbegin%7Bbmatrix%7D%20a%20%26%20b%26%20%7C%20%26%201%20%26%200%5C%5C%200%20%26%20ad-bc%20%26%20%7C%20%26%20-c%20%26%20a%20%5Cend%7Bbmatrix%7D%3D%20%5Cbegin%7Bbmatrix%7D%20%28ad-bc%29a%20%26%200%26%20%7C%20%26%20ad%20%26%20-ab%5C%5C%200%20%26%20ad-bc%20%26%20%7C%20%26%20-c%20%26%20a%20%5Cend%7Bbmatrix%7D%3D%20%5Cbegin%7Bbmatrix%7D%201%26%200%26%20%7C%20%26%20%5Cfrac%7Bd%7D%7Bad-bc%7D%20%26%20%5Cfrac%7B-b%7D%7Bad-bc%7D%5C%5C%200%20%26%201%20%26%20%7C%20%26%20%5Cfrac%7B-c%7D%7Bad-bc%7D%20%26%20%5Cfrac%7Ba%7D%7Bad-bc%7D%20%5Cend%7Bbmatrix%7D)
+  - Determinant of 3 x 3 matrix C: Det(C)<br/>
+  ![](https://latex.codecogs.com/gif.latex?%5Cfn_jvn%20Det%28C%29%20%3D%20C_%7B11%7D%5Cbegin%7Bvmatrix%7D%20C_%7B22%7D%20%26%20C_%7B23%7D%5C%5C%20C_%7B32%7D%20%26%20C_%7B33%7D%20%5Cend%7Bvmatrix%7D%20-%20C_%7B12%7D%5Cbegin%7Bvmatrix%7D%20C_%7B21%7D%20%26%20C_%7B23%7D%5C%5C%20C_%7B31%7D%20%26%20C_%7B33%7D%20%5Cend%7Bvmatrix%7D%20&plus;%20C_%7B13%7D%5Cbegin%7Bvmatrix%7D%20C_%7B21%7D%20%26%20C_%7B22%7D%5C%5C%20C_%7B31%7D%20%26%20C_%7B32%7D%20%5Cend%7Bvmatrix%7D%20%3D%20C_%7B11%7D%20%28C_%7B22%7DC_%7B33%7D%20-%20C_%7B32%7DC_%7B23%7D%29%20-%20C_%7B12%7D%28C_%7B21%7DC_%7B33%7D%20-%20C_%7B31%7DC_%7B23%7D%29%20&plus;C_%7B13%7D%28C_%7B21%7DC_%7B32%7D%20-%20C_%7B31%7DC_%7B22%7D%29)
 
 ---
 
