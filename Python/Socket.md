@@ -1,5 +1,6 @@
 ## [Socket](https://docs.python.org/ko/3.7/library/socket.html)
 
+- 아래 코드는 동기식으로 구성되어 있음. (요청에 대한 응답을 기다린 후, 응답이 오면 다음 요청을 하는 방식)
 - Server must be on first.
 - `server.py`
   ```python
