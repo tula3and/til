@@ -54,4 +54,35 @@
   
   printValues(1, 2, 3, 4, 5)
   ```
+- Lambda
+  ```kotlin
+  val multi1 = { a: Int, b: Int -> a * b }
+  val multi2: (a: Int, b: Int) -> Int = { a, b -> a * b }
+  ```
+- Anonymous
+  ```kotlin
+  fun (x: Int, y: Int): Int =  x + y
+  
+  val add1: (Int, Int): Int = fun(x, y) = x + y
+  val add2 = { x: Int, y: Int -> x + y }
+  ```
+- Inline: `infix`
+  ```kotlin
+  infix fun Int.multi(x: Int): Int {
+      return this * x
+  }
+
+  // result = 7.multi(3)
+  result = 7 multi 3
+  ```
+- Tail recursive: `tailrec`
+  ```kotlin
+  tailrec fun factorial(n: Int, run: Int = 1): Long {
+      return if (n == 1) run.toLong() else factorial(n-1, run*n)
+  }
+  ```
+
+
+
+
 
