@@ -9,7 +9,37 @@
     }
   }
   ```
-
+- Overriding & Overloading
+  - Overriding: in a child class
+    ```java
+    class Plus {
+        public int sum(int a, int b) {
+            return a + b;
+        }
+    }
+    
+    // Overriding
+    class NewPlus extends Plus {
+        public int sum(int a, int b) {
+            System.out.println("New!");
+            return a + b;
+        }
+    }
+    ```
+  - Overloading: in the same class
+    ```java
+    class Plus {
+        public int sum(int a, int b) {
+            return a + b;
+        }
+        
+        // Overloading
+        public int sum(int a, int b, int c) {
+            return a + b + c;
+        }
+    }
+    ```
+  
 
 
 
