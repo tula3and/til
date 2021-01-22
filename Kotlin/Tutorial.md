@@ -57,7 +57,17 @@
 - Lambda
   ```kotlin
   val multi1 = { a: Int, b: Int -> a * b }
-  val multi2: (a: Int, b: Int) -> Int = { a, b -> a * b }
+  val multi2: (Int, Int) -> Int = { a, b -> a * b }
+  
+  val isPositive: (int) -> Boolean = {
+      val isPositive = it > 0
+      isPositive // The last expression returns
+  }
+  
+  val isPositiveLabel: (Int) -> Boolean = number@ {
+      val isPositive = it > 0
+      return@number isPositive
+  }
   ```
 - Anonymous
   ```kotlin
