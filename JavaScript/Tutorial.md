@@ -14,13 +14,13 @@
 
 ## Basic structure
 
-```javascript
+```js
 'use strict';
 ```
 
 ## Variables
 
-```javascript
+```js
 let num = 1;
 
 //cannot change const
@@ -33,12 +33,12 @@ const weekends = 2;
 - Boolean
   - false `0` `null` `undefined` `NaN` `''`
   - Strict equality `===`
-      ```javascript
+      ```js
       console.log('hello' === 'hello'); //true
       console.log('1' ===  1); //false
       ```
   - Use question mark
-      ```javascript
+      ```js
       console.log( 100 > 1 ? 'yes' : 'no'); //yes
       ```
       
@@ -50,7 +50,7 @@ const weekends = 2;
 ## Conditional
 
 - "Early return, early exit"
-    ```javascript
+    ```js
     {
       if () {
         return "something wrong"
@@ -61,7 +61,7 @@ const weekends = 2;
     ```
 
 - Switch
-    ```javascript
+    ```js
     switch (variable) {
       case 'value1':
         statement;
@@ -77,7 +77,7 @@ const weekends = 2;
 
 ## Function
 
-```javascript
+```js
 fun1 = function () { console.log("hello"); }
 fun2 = () => console.log("hello");
 
@@ -88,13 +88,13 @@ fun2() //hello
 ## Object
 
 - Pack data to manage easily
-    ```javascript
+    ```js
     const tula = { name: 'tula', age: 100 };
     console.log(tula.name); //most
     console.log(tula['name']); //call a function
     ```
 - Make many objects at once
-    ```javascript
+    ```js
     //using function
     function Person(name, age) {
         this.name = name;
