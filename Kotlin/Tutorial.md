@@ -7,6 +7,11 @@
       println("${args[0]}")
   }
   ```
+- Input values
+  ```kotlin
+  var input: String? = readLine()
+  var ints: List<String> = input!!.split(",".toRegex()) // first_num = ints[0].toInt()
+  ```
 
 ## Variable
 
@@ -92,7 +97,25 @@
   }
   ```
 
+## Array
 
+- Set a type of values
+  ```kotlin
+  var nums = arrayOf(1, 2, 3, 4, 5)
+  // var nums: IntArray = intArrayOf(1, 2, 3, 4, 5)
+  // var chars: CharArray = charArrayOf('a', 'b', 'c', 'd', 'e')
 
+  // numbers in nums
+  for (num in nums) {
+      println(num)
+  }
 
+  var arr1 = Array<Int>(5, {0})
+  var arr2 = Array<String>(5, {" "})
+  val arr3 = Array(5, { x -> (x * x) }) // 0, 1, 4, 9, 16
+  ```
+- 3x3 array
+  ```kotlin
+  var board = Array<IntArray>(3, {IntArray(3)})
+  ```
 
