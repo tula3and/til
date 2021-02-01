@@ -6,6 +6,8 @@
     - WSL2: `bcdedit /set hypervisorlaunchtype auto`
     - VirtualBox: `bcdedit /set hypervisorlaunchtype off`
   - 위의 명령 입력 후에는 재부팅하기.
+- 컨테이너는 하나의 가상 환경처럼 작동하고 그 안에 채워지는 게 이미지라고 생각하면 쉽다.
+- 그리고 컨테이너를 올릴 땐, 그 컨테이너가 또 하나의 이미지로 생성된다.
 
 ## Commands
 
@@ -14,6 +16,9 @@
 - `docker stop <CONTAINER ID>` 컨테이너 종료하기
   - 다른 컨테이너랑 구분될 경우, `<CONTAINER ID>`의 일부만 작성해도 된다.
 - `docker rm <CONTAINER ID>` 컨테이너 삭제하기
+- `docker images` 이미지 목록 확인하기
+- `docker pull <name>` 이미지 다운로드 또는 업데이트 하기
+- `docker rmi <IMAGE ID>` 이미지 삭제하기
 
 ## References
 
