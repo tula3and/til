@@ -15,7 +15,7 @@
     1. `r` read, 읽기 권한
     2. `w` write, 쓰기 권한
     3. `x` execute, 실행 권한
-- `vim` 텍스트 편집기
+- `vim` 텍스트 편집기: [더 많은 정보](https://missing-semester-kr.github.io/2020/editors/)
   - 기본 루틴 `i` → 글 수정 → `Esc` → `:wq`
 - `nano` 텍스트 편집기
   ```
