@@ -5,4 +5,5 @@
 - Coding with Qiskit (Videos)
   - [Season 1](https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY)
   - [Season 2](https://www.youtube.com/playlist?list=PLOFEBzvs-VvrhKYASly1BXo1AdPyoCsor)
+- [Introduction to Quantum Computing and Quantum Hardware](https://qiskit.org/learn/intro-qc-qh/)
 - [Microsoft Quantum Documentation](https://docs.microsoft.com/en-us/quantum/?view=qsharp-preview)
