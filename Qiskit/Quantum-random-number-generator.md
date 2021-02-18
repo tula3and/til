@@ -20,7 +20,7 @@ circuit.draw('mpl')
 ```python
 from qiskit.tools.visualization import plot_histogram
 backend = Aer.get_backend('qasm_simulator')
-result = execute(circuit, backend, shot=100, memory=True).result()
+result = execute(circuit, backend, shots=100, memory=True).result()
 val = result.get_memory()
 print(val) #['00001', '01000', ... , '01010', '01101']
 ```
