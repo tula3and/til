@@ -14,6 +14,9 @@
         ```
         git add <file name>
         git add <folder name>
+        
+        // Cancel git add
+        git reset HEAD <file name>
         ```
     4. `git config --global user.email "<email>"`
     5. `git commit -m "<message>"`
