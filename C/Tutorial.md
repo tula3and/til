@@ -368,3 +368,18 @@ int main() {
     	printf("%d", tula.age);
     }
     ```
+
+## 파일 I/O
+
+```c
+int num;
+FILE* f;
+if (fopen_s(&f, "input.txt", "r")) {
+    fprintf(stderr, "cannot open the file");
+    exit(EXIT_FAILURE); // #include <stdlib.h>
+}
+fscanf_s(f, "%d", &num); // Read f
+printf("%d", num);
+fclose(fp);
+```
+
