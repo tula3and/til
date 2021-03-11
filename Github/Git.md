@@ -54,3 +54,10 @@
     git remote add upstream <main source link>
     git pull upstream master
     ```
+- Delete commit history
+    ```
+    git log
+    git reset HEAD^
+    git push -f origin "<branch>"
+    ```
+
