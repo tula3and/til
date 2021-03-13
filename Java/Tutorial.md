@@ -1,5 +1,6 @@
 ## Java tutorial
 
+- Download [OpenJDK](https://jdk.java.net/15/) and set the environment variable
 - `.java` → (Compile) → `.class` → `Java Virtual Machine` → `computer`
 - Print "Hello World"
   ```java
