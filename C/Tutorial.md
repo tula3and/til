@@ -215,8 +215,9 @@ int main() {
     - 배열에서 포인트 주소를 n 증가시키면 (n * 자료형의 크기) 만큼 커진다.
     - 2차원 배열일 때 포인트 주소를 증가시키면 행만큼 증가
 - 배열 선언 시
-  - 배열 포인터 `int (*ptr)[3] = arr`
-    - 증감 연산자 사용 가능 `*++(*ptr++)`
+  - 배열 포인터 `int (*ptr)[3] = &arr // arr is a 1D array`
+    - 배열 포인터는 하나의 배열을 가르키는 하나의 포인터이다.
+    - 증감 연산자 사용 가능: `++(*(*ptr++))`
   - 포인터 배열 `int *ptr[3] = {&num1, &num2, &num3}`
 - 배열 포인터를 이용해서 출력하기
   ```c
@@ -224,7 +225,7 @@ int main() {
 
   int main() {
     int arr[3][4] = { {1,2,3,4}, {5,6,7,8}, {9,10,11,12} };
-    int(*ptr)[4] = arr;
+    int(*ptr)[4] = arr; // First element of the 2D array means its reference
     int i, j;
 
     printf("이중포인터(**)로 출력\n");
