@@ -42,6 +42,22 @@
   - Method `lowerCamelCase`
   - Constant `NUMBER`
   - Variable `lowerCamelCase`
+- Input values: [Scanner methods](https://www.javatpoint.com/Scanner-class)
+  ```java
+  System.out.println("Input your name, age, and marital status: ");
+  Scanner a = new Scanner(System.in);
+
+  String name = a.next();
+  System.out.print("Name: " + name + ", ");
+
+  int age = a.nextInt();
+  System.out.print("Age: " + age + ", ");
+
+  boolean single = a.nextBoolean();
+  System.out.print("Marital status: " + single);
+
+  a.close();
+  ```
 - Overriding & Overloading
   - Overriding: in a child class
     ```java
