@@ -58,6 +58,19 @@
 
   a.close();
   ```
+- Array
+  - Declare: `int arr[]` or `int[] arr`
+  - Create: `arr = new int[10]`
+  - Share an array (get same reference): `arr = newArr`
+  - `enum`
+    ```java
+    enum Week { mon, tue, wed, thu, fri, sat, sun }
+    
+    public static void main(String[] args) {
+        for (Week day : Week.values())
+            System.out.println(day); // day.ordinal() // int
+    }
+    ```
 - Overriding & Overloading
   - Overriding: in a child class
     ```java
