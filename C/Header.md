@@ -3,9 +3,11 @@
 - `#include <stdio.h>` The essential
 - `#include <string.h>`
   - `strlen()` 문자열 길이 반환
+  - `strtok_s(<char>, <div>, <r>)` `<div>`로 문자열 나누고 이후 문자열은 `<r>`에 할당
   - `memcpy(<save>, <copy>, <len>)` 문자배열 복사
   - `memchr(<where>, <char>, <len>)` `<char>` 이후의 문자열 전부 반환
-  - `strcmp(<char>, <char>)` 두 문자열이 같으면 `0` 반환
+  - `strcmp(<char>, <char>)` 두 문자열이 같으면 `0` 반환 (`1`일 경우 전자의 길이가 더 길다.)
+  - `sscanf_s(<start>, "%s %s", s1, sizeof(s1), s2, sizeof(s2))` `<start>` 시작 위치 주소값
 - `#include <stdlib.h>`
   - `malloc` 동적 메모리 할당
     ```c
