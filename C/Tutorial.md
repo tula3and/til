@@ -210,6 +210,12 @@ int main() {
   - 배열을 매개변수에서 선언할 때 `<자료형>` + `arr[]` 또는 `*arr`을 적는다.
     - 매개변수 선언에는 둘이 동일한 선언이다.
     - 그 외의 선언에서는 `*ptr` != `ptr[]`
+  - 이차원 배열을 매개변수로 선언할 때에는 3가지 방법이 있다.
+    ```c
+    int sumAry2D_f1(int ary[][3], int ROW, int COL); // array parameter
+    int sumAry2D_f2(int(*ary)[3], int ROW); // array pointer
+    int sumAry2D_f3(int ary[3][3]);
+    ```
   - 배열의 이름은 포인터 변수와 동일한 역할을 한다.
   - 배열의 주소는 연결되어 있어서 첫 번째 주소값을 이용해 그 다음의 값들도 가져올 수 있다.
     - 배열에서 포인트 주소를 n 증가시키면 (n * 자료형의 크기) 만큼 커진다.
