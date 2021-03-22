@@ -266,74 +266,11 @@ int main() {
 
 - 하나 이상의 변수를 묶은 덩어리
 - 변수만 묶은 형태로, 파이썬의 `class`와는 다른 개념이다.
-- 구조체 선언하기
-  - `struct <구조체 이름> {};`
-      ```c
-      #include <stdio.h>
-
-      struct person {
-        char name[15];
-        int age;
-      };
-
-      int main(){
-        struct person tula; //struct person tula = { .name = "tula", .age = "20" };
-
-        scanf("%s", tula.name);
-        scanf("%d", &tula.age);
-
-        printf("name: %s\nage: %d\n", tula.name, tula.age);
-
-        return 0;
-      }
-        ```
-  - `typedef struct <구조체 이름> <구조체 이름>;`
-      ```c
-      #include <stdio.h>
-
-      struct person {
-        char name[15];
-        int age;
-      };
-
-      typedef struct person Person;
-      
-      int main(){
-        Person tula;
-
-        scanf("%s", tula.name);
-        scanf("%d", &tula.age);
-
-        printf("name: %s\nage: %d\n", tula.name, tula.age);
-
-        return 0;
-      }
-      ```
-  - `typedef struct <구조체 이름(생략 가능)> {} <구조체 이름>;`
-      ```c
-      #include <stdio.h>
-
-      typedef struct person {
-        char name[15];
-        int age;
-      } Person;
-
-      int main(){
-        Person tula;
-
-        scanf("%s", tula.name);
-        scanf("%d", &tula.age);
-
-        printf("name: %s\nage: %d\n", tula.name, tula.age);
-
-        return 0;
-      }
-      ```
 - 구조체를 배열로 사용하기
     ```c
     #include <stdio.h>
 
-    typedef struct _Person {
+    typedef struct {
     	char name[15];
     	int age;
     } Person;
@@ -353,7 +290,8 @@ int main() {
     	return 0;
     }
     ```
-- 함수에 구조체 전달하기 - `p->` 또는 `(*p)`
+- 구조체 `char` 데이터 복사할 때: `strcpy(d2.name, d1.name);`
+- 함수에 구조체 전달할 때: `p->` 또는 `(*p)`
     ```c
     #include <stdio.h>
 
@@ -362,7 +300,7 @@ int main() {
     } Person;
 
     void change(Person *p){
-    	p->age = 30; //(*p).age = 30;
+    	p->age = 30; // (*p).age = 30; // If p is a array: (p + i)->age
     }
 
     int main(){
@@ -377,6 +315,21 @@ int main() {
     	printf("%d", tula.age);
     }
     ```
+- 자기 참조 구조체
+  ```c
+  typedef struct list {
+    char data[100];
+    list *link;
+  };
+  
+  // Copy the structure
+  // Don't use p1 = p2 because of pointer issues
+  // If each structure has same memory space, they change together
+  // Use these codes to copy:
+    // strcpy(d2.data, d1.data);
+    // d2.link = d1.data;
+    // printf("%s %s", d1.data, d1.link->data);
+  ```
 
 ## 파일 I/O
 
