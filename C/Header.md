@@ -27,6 +27,33 @@
         return 0;
     }
     ```
+  - `calloc` 동적 메모리 할당 및 0으로 초기화
+    ```c
+    #define CALLOC(p,n,s) \
+      if (!((p) = calloc(n,s))) { \
+        fprintf(stderr, "Insufficient memory"); \
+        exit(EXIT_FAILURE); \
+      }
+
+    int *x, n;
+    x = (int*) calloc(n, sizeof(int));
+    ```
+  - `realloc` 이미 존재하는 배열 사이즈를 바꿀 때 사용
+    ```c
+    #define REALLOC(o,p,s) \
+    if (!((p) = realloc(o,s))) { \
+      free(o); \
+      fprintf(stderr, "Insufficient memory"); \
+      exit(EXIT_FAILURE); \
+    }
+
+    int *old, *x, s;
+    old = x;
+    if ((x = (int*) realloc(x, s * sizeof(int))) == NULL) {
+      free(old);
+      exit(EXIT_FAILURE);
+    }
+    ```
   - `rand()` 0과 32767 사이의 임의의 정수 반환
     - 그러나 함수 호출 순서에 따라서 매번 일정한 수 반환
       - 그래서 `srand()`를 이용해 시드값을 바꾼다.
