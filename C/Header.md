@@ -3,7 +3,7 @@
 - `#include <stdio.h>` The essential
 - `#include <string.h>`
   - `strlen()` 문자열 길이 반환
-  - `strtok_s(<char>, <div>, <r>)` `<div>`로 문자열 나누고 이후 문자열은 `<r>`에 할당
+  - `strtok_s(<char>, <div>, <r>)` `<div>`로 문자열 나눠 전자는 반환, 후자는 `<r>`에 할당
   - `memcpy(<save>, <copy>, <len>)` 문자배열 복사
   - `memchr(<where>, <char>, <len>)` `<char>` 이후의 문자열 전부 반환
   - `strstr(<where>, <char>)` `<char>` 시작 주소 반환 (못 찾으면 `NULL`)
