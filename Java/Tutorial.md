@@ -28,7 +28,7 @@
 - Print "Hello World"
   ```java
   // HelloWorldApp.java
-  // There must be just one public class each file
+  // There must be just ONE PUBLIC CLASS each file
   public class HelloWorldApp{ // Public class name must be same with the file name
     public static void main(String[] args) { // There must be also one main method each file
       System.out.println("Hello world!!"); // Not i
@@ -71,8 +71,21 @@
             System.out.println(day); // day.ordinal() // int
     }
     ```
+- Class can have fields and methods.
+  - Constructor: initialize field values and no `return`
+  - Class can make an object (instance) which has states and behaviors.
+  - Objects and arrays copy each reference using `=`
+  - Each element in an array of objects must be initialized!
+    ```
+    Animal [] a = new Animal[5];
+    
+    for (int i = 0; i < a.length; i++) {
+      a[i] = new Animal();
+    }
+    ```
+- Inheritance using `extends`: `Class sub_class extends super_class`
 - Overriding & Overloading
-  - Overriding: in a child class
+  - Overriding: in a child class: same parameters
     ```java
     class Plus {
         public int sum(int a, int b) {
@@ -88,7 +101,7 @@
         }
     }
     ```
-  - Overloading: in the same class
+  - Overloading: in a same class: different parameters (e.g. constructor overloading)
     ```java
     class Plus {
         public int sum(int a, int b) {
@@ -101,7 +114,12 @@
         }
     }
     ```
-  
+- Access modifier: (literally) `default` `private` `public` `protected`
+  - private < default < protected < public
+  - private: only in a same class
+  - default: in a same package
+
+
 
 
 
