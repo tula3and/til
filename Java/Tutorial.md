@@ -76,7 +76,7 @@
   - Class can make an object (instance) which has states and behaviors.
   - Objects and arrays copy each reference using `=`
   - Each element in an array of objects must be initialized!
-    ```
+    ```java
     Animal [] a = new Animal[5];
     
     for (int i = 0; i < a.length; i++) {
