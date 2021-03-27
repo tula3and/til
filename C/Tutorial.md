@@ -335,13 +335,17 @@ int main() {
 
 ```c
 int num;
+char string[100];
+
 FILE* f;
 if (fopen_s(&f, "input.txt", "r")) {
     fprintf(stderr, "cannot open the file");
     exit(EXIT_FAILURE); // #include <stdlib.h>
 }
+
 fscanf_s(f, "%d", &num); // Read f
-printf("%d", num);
-fclose(fp);
+fgets(string, 100, f); // Read a whole sentece // if (feof(f)) break;
+
+fclose(f);
 ```
 
