@@ -62,6 +62,7 @@
         ```
     - `rand() % (b - a + 1) + a` a와 b 사이의 난수 발생
   - `srand(<seed>)` 시드값이 다르면 난수가 달라짐
+  - `atoi` `atof` `atol` char to int/double/long: 문자열을 숫자로 변환 
 - `#include <time.h>`
   - `time(NULL)` 1970년 1월 1일 이후 현재까지 경과된 시간을 초 단위로 반환
 - `#include <ctype.h>` 검사 후 참일 경우 0이 아닌 정수 반환
