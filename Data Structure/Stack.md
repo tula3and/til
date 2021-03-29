@@ -23,7 +23,7 @@
     ```c
     element pop() {
       if (top == -1) return stackEmpty(); // return error // exit(EXIT_FAILURE);
-      return stack[--top];
+      return stack[top--];
     }
     ```
 - Python
