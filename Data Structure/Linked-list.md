@@ -3,7 +3,77 @@
 - Linking data away from each other with arrows
   - Node: the place for saving data
   - Pointer: the place for linking information
-- Make liked list with python
+- Make a linked list with C
+  - Make `Node` and `Pointer`
+    ```c
+    typedef struct Node* Pointer;
+    struct Node {
+      int data;
+      Pointer link;
+    };
+    ```
+  - Find the position to put data in
+    ```c
+    // Need to change before value so it must be its reference using *
+    void find(Pointer first, Pointer *before, int data) {
+      Pointer trav = first;
+
+      if (first == NULL) { // Empty
+        *before = first;
+      }
+      else {
+        for (; trav; trav = trav->link) {  	
+          if (data == trav->data) {
+            *before = trav;
+            return;
+          }
+        }
+        printf("Cannot find the matched one\n");
+      }
+    }
+    ```
+  - Add data behind node `before`
+    ```c
+    void insert(Pointer *first, Pointer before, int data) {
+      Pointer temp;
+      temp = malloc(sizeof(*temp));    
+      temp->data = data;
+
+      if (*first == NULL) { // Empty
+        temp->link = NULL;
+        *first = temp;
+      }
+      else {
+        if (before == NULL) {
+          temp->link = *first;
+          *first = temp;
+        }
+        else { 
+          temp->link = before->link;
+          before->link = temp;
+        }
+      }
+    }
+    ```
+  - Delete node `target`
+    ```c
+    void delete(Pointer *first, Pointer before, Pointer target) {
+      if (before) before->link = target->link;
+      else *first = (*first)->link;
+      free(target);
+    }
+    ```
+  - Print data
+    ```c
+    void show(Pointer first) {
+      int cnt = 1;
+      for (; first; first = first->link, cnt++) {
+        printf("(%p, %4d, %p)%s", first, first->data, first->link, cnt % 3 ? " " : "\n");
+      }
+      printf("\n");
+    }
+    ```
+- Make a linked list with python
   - Make `Node`
     ```python
     class Node:
