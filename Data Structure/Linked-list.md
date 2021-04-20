@@ -73,6 +73,25 @@
       printf("\n");
     }
     ```
+  - Reverse the list
+    ```c
+    void reverse(Pointer* first) {
+      Pointer bef = NULL, current = *first, next = (*first)->link;
+      while (next != NULL) {
+        if (current == *first) {
+          current->link = NULL;
+        }
+        else {
+          current->link = bef;
+        }
+        bef = current;
+        current = next;
+        next = current->link;
+      }
+      current->link = bef;
+      *first = current;
+    }
+    ```
 - Make a linked list with python
   - Make `Node`
     ```python
