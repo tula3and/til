@@ -69,6 +69,7 @@
   - `isalpha()` 영문자 검사
   - `isupper()` `islower()` 대소문자 검사
   - `toupper()` `tolower()` 대소문자 변환
+  - `isdigit()` 숫자 검사
 - `#include <stdarg.h>`
   - `va_list`, `va_start`, `va_arg`, `va_end`
   - 가변 인자를 `...`으로 선언
