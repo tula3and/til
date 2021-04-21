@@ -84,6 +84,18 @@
     }
     ```
 - Inheritance using `extends`: `Class sub_class extends super_class`
+  - Object parameter `Object obj`: write `(<class>) obj`
+  - Override `toString()`
+    ```java
+    @Override
+    public String toString() {
+      return String.format("<string>");
+    }
+    
+    public static void main(String[] args) {
+      System.out.println(<obj>); // Print <string>
+    }
+    ```
 - Overriding & Overloading
   - Overriding: in a child class: same parameters
     ```java
