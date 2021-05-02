@@ -4,6 +4,67 @@
 - Usually used as binary tree: has at most two children
   - Binary search tree (BST): left child node is smaller amd right one is larger than the parent node
     - For searching a specific value
+  - Threaded binary tree: replace null links of a leaf node to a pointer linked to another node
+    - Use inorder traversal to find the pointer
+      ```c
+      Pointer inorderPredecessor(Pointer ptr) { // before ptr
+        Pointer temp = ptr->leftChild; // left subtree
+        if (ptr->leftThread == FALSE) {
+          while (temp->rightThread == FALSE) temp = temp->rightChild; // move right
+        }
+        return temp;
+      }
+      
+      Pointer inorderSuccessor(Pointer ptr) { // after ptr
+        Pointer temp = ptr->rightChild; // right subtree
+        if (ptr->rightThread == FALSE) {
+          while (temp->leftThread == FALSE) temp = temp->leftChild; //  move left
+        }
+        return temp;
+      }
+      ```
+    - If a leaf node is either the first node or the last one, connect it to the root
+    - Because of these threaded links, each node has `boolean values` to check that the links are child nodes or not
+      ```c
+      /*
+      root = malloc(sizeof(*root));
+      root->leftThread = FALSE;
+      root->rightThread = FALSE;
+      root->data = ' ';
+      root->leftChild = root;
+      root->rightChild = root;
+      */
+      
+      void makeThread(Pointer ptr) {
+        if (ptr->leftThread && ptr->rightThread) return;
+        if (ptr) {
+          Pointer leftT = inorderSuccessor(ptr); // after ptr
+          if (leftT != NULL && leftT->leftThread == TRUE) {
+            leftT->leftChild = ptr;
+          }
+          Pointer rightT = inorderPredecessor(ptr); // before ptr
+          if (rightT != NULL && rightT->rightThread == TRUE) {
+            rightT->rightChild = ptr;
+          }
+          makeThread(ptr->leftChild);
+          makeThread(ptr->rightChild);
+        }
+      }
+      
+      /*
+      makeThread(root->leftChild);
+      makeThread(root->rightChild);
+
+      Pointer leftT = inorderSuccessor(root); // after root // first
+      if (leftT != NULL && leftT->leftThread == TRUE) {
+        leftT->leftChild = root;
+      }
+      Pointer rightT = inorderPredecessor(root); // before root // last
+      if (rightT != NULL && rightT->rightThread == TRUE) {
+        rightT->rightChild = root;
+      }
+      */
+      ```
   - Heap (complete binary tree):
     - For finding a max or min value: max & min heap
     - Use an array: root index is 1
