@@ -2,7 +2,7 @@
 
 - NO cycles at all
 - Usually used as binary tree: has at most two children
-  - Binary search tree (BST): left child node is smaller amd right one is larger than the parent node
+  - Binary search tree (BST): left child node is smaller and right one is larger than the parent node
     - For searching a specific value
   - Threaded binary tree: replace null links of a leaf node to a pointer linked to another node
     - Use inorder traversal to find the pointer
@@ -67,10 +67,38 @@
       ```
   - Heap (complete binary tree):
     - For finding a max or min value: max & min heap
+      - Max heap: parent ≥ child
+      - Min heap: parent ≤ child
+    - Delete the root node first
+      ```c
+      element pop() {
+        int parent, child;
+        element item, temp;
+        if (HEAP_EMPTY(n)) {
+          fprintf(stderr, "The heap is empty.\n");
+          exit(EXIT_FAILURE);
+        }
+        item = heap[1];
+        temp = heap[n--]; // last node
+        parent = 1; child = 2;
+        while (child <= n) { // check just one child node
+          if ((child < n) && (heap[child].key < heap[child + 1].key)) {
+            child++;
+          }
+          if (temp.key >= heap[child].key) break;
+          heap[parent] = heap[child];
+          parent = child;
+          child *= 2;
+        }
+        heap[parent] = temp;
+        return item;
+      }
+      ```
     - Use an array: root index is 1
       - Parent's node's index: `(child node's index) // 2`
       - Left child node's index: `(parent node's index) * 2`
       - Right child node's index: `(parent node's index) * 2 + 1`
+    - Complete binary tree: fill left child first
 - Make a binary tree with C
   - Make `Node` and `Pointer`
     ```c
