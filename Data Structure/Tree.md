@@ -3,7 +3,11 @@
 - NO cycles at all
 - Usually used as binary tree: has at most two children
   - Binary search tree (BST): left child node is smaller and right one is larger than the parent node
-    - For searching a specific value
+    - For searching a specific value: O(the height of a BST)
+    - Each node has exactly one key and the keys in the tree are distinct.
+    - The keys (if any) in the left subtree are smaller than the key in the root.
+    - The keys (if any) in the right subtree are larger than the key in the root.
+    - The left and right subtrees are also binary search trees.
   - Threaded binary tree: replace null links of a leaf node to a pointer linked to another node
     - Use inorder traversal to find the pointer
       ```c
