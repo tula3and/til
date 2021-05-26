@@ -75,19 +75,20 @@
       - Min heap: parent ≤ child
     - Delete the root node first
       ```c
+      // max heap
       element pop() {
         int parent, child;
         element item, temp;
-        if (HEAP_EMPTY(n)) {
+        if (HEAP_EMPTY(n)) { // #define HEAP_EMPTY(n) (!n)
           fprintf(stderr, "The heap is empty.\n");
           exit(EXIT_FAILURE);
         }
-        item = heap[1];
+        item = heap[1]; // root
         temp = heap[n--]; // last node
         parent = 1; child = 2;
         while (child <= n) { // check just one child node
           if ((child < n) && (heap[child].key < heap[child + 1].key)) {
-            child++;
+            child++; // move to the right child
           }
           if (temp.key >= heap[child].key) break;
           heap[parent] = heap[child];
