@@ -186,7 +186,29 @@
     }
     ```
 
+## Spanning tree
 
-
+- All the nodes are connected.
+- Minimum spanning tree (MST): the least weight sum
+- How to find a MST: use greedy
+  - Kruskal's: sort all the edges based on each weight: O(ElogE) (quick sort)
+    - Time complexity: O(ElogE) = O(V + ElogE + E)
+    - Check the root of a node to connect
+      - If their roots are same, move to next edge
+      - It their roots are different, connect them
+    - How to check the root: use disjoint sets
+      - Initialize first: O(V)
+      - Union after connecting (union-by-rank)
+      - Find before connecting (path compression)
+  - Prim's: start from a vertex
+    - Time complexity: O(ElogV) = O(V + VlogV + ElogV)
+    - Pick a start vertex: O(VlogV)
+      - Put the vertex to a "connected node" set
+      - Put edges connect with the vertex to a "edges" set
+    - Pop the mininum-weight edge from the edges set until the edges set is empty: O(ElogV)
+      - If another connected node is in "connected node", skip
+      - If another connected node is not in "connected node", put the edge to a "result" set
+        - Put the vertex to a "connected node" set
+        - Put edges connect with the vertex to a "edges" set
 
 
