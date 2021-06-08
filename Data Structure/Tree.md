@@ -26,6 +26,15 @@
         }
         return temp;
       }
+      
+      void threadInorder(Pointer ptr) {
+        Pointer temp = ptr;
+        while (TRUE) {
+          temp = inorderSuccessor(temp);
+          if (temp == ptr) break;
+          printf("%c ", temp->data);
+        }
+      }
       ```
     - If a leaf node is either the first node or the last one, connect it to the root
     - Because of these threaded links, each node has `boolean values` to check that the links are child nodes or not
