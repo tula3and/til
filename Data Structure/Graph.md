@@ -1,5 +1,16 @@
 ## Graph
 
+- A nonempty set of vertices and a set of undirected edges, where each edge is a pair of vertices
+- (undirected) `(u, v)` is an edge in E(G)
+  - Vertices u and v are adjacent.
+  - The edge (u, v) is incident on vertices u and v.
+- (directed) `<u, v>` is an edge in E(G)
+  - Vertex u is adjacent to v and v is adjacent from u.
+  - The edge <u, v> is incident to vertices u and v.
+- Complete graph: undirected, n-vertex and n(n-1)/2 edges
+- Restrictions
+  - May not have an edge from a vertex back to itself: self edge or self loop
+  - May not have multiple occurrences of the same edge
 - Adjacency list: O(e) (using a linked list)
 - Adjacency matrix: O(n^2) (using a 2D array)
 - Graph traversal
