@@ -17,6 +17,51 @@
     }
     ```
   - Merge sort (nlogn, nlogn)
+    ```c
+    void merge(int* init, int i, int m, int n) {
+        int* merged = malloc(sizeof(int) * (n + 1));
+        int j, k, t;
+        // copy all to merged
+        for (j = i; j <= n; j++) {
+            merged[j] = init[j];
+        }
+        // first start index: i
+        // second start index: j
+        j = m + 1;
+        // save a sorted result to init using k
+        k = i;
+        while (i <= m && j <= n) {
+            if (merged[i].key <= merged[j].key) {
+                init[k++] = merged[i++];
+            }
+            else {
+                init[k++] = merged[j++];
+            }
+        }
+        // add remains
+        if (i > m) {
+            for (t = j; t <= n; t++) {
+                init[t] = merged[t];
+            }
+        }
+        else {
+            for (t = i; t <= m; t++) {
+                init[k + t - i] = merged[t];
+            }
+        }
+    }
+
+    void merge_sort(int *list, int left, int right, int n) {
+        int mid;
+        if (left < right) {
+            mid = (left + right) / 2;
+            merge_sort(list, left, mid, n); // sort the front
+            merge_sort(list, mid + 1, right, n); // sort the rear
+            merge(list, left, mid, right); // merge
+            printList(list, n);
+        }
+    }
+    ```
   - Bubble sort (n^2, n^2)
     ```c
     void bubble_sort(int list[], int n) {
@@ -50,7 +95,7 @@
         arr[where] = temp;
     }
     ```
-  - Heap sort (nlogn, nlogn)
+  - Heap sort (nlogn, nlogn): [Tree - Heap](https://github.com/tula3and/til/blob/master/Data%20Structure/Tree.md#tree)
   - Shell sort (n, n^2)
   - Quick sort (nlogn, n^2)
     ```c
