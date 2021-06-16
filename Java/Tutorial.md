@@ -96,6 +96,9 @@
       System.out.println(<obj>); // Print <string>
     }
     ```
+- Interface using `implements`: `Class class implements interface1, interface2, interface3, ...`
+  - Use a keyword `abstract` infront of each function in the interface file
+  - Implemented class sets the details using `@Override` for all the functions
 - Overriding & Overloading
   - Overriding: in a child class: same parameters
     ```java
@@ -130,8 +133,11 @@
   - private < default < protected < public
   - private: only in a same class
   - default: in a same package
-
-
+- Exception
+  - `java.lang.NumberFormatException`: not a number
+  - `java.lang.NullPointerException`: do something with `null`
+  - `java.io.IOException`: IO error
+  - `java.io.FileNotFoundException`: the file does not exist
 
 
 
