@@ -4,6 +4,8 @@
   - WSL2와 VirtualBox을 동시에 사용할 때는 충돌이 있다.
   - 사용 전에 아래 명령을 명령 프롬프트(cmd)를 `관리자 권한`으로 실행하고 아래 명령어를 실행하자.
     - WSL2: `bcdedit /set hypervisorlaunchtype auto`
+      - `wsl` 명령어 사용 기본값 설정: `wsl -s <사용할 기본값>`
+      - `<사용할 기본값>` 이름 확인: `wsl -l`
     - VirtualBox: `bcdedit /set hypervisorlaunchtype off`
   - 위의 명령 입력 후에는 재부팅하기.
 - 컨테이너는 하나의 가상 환경처럼 작동하고 그 안에 채워지는 게 이미지라고 생각하면 쉽다.
