@@ -11,7 +11,7 @@
   gcc -o main main.o
   ./main
   ```
-- Make `MakeFile`: very tired to type all the commands while changing
+- Make `Makefile`: very tired to type all the commands while changing
   - `<target>`: `<parameter(s)>`
     ```
     main: main.o
