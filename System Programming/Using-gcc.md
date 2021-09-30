@@ -11,6 +11,7 @@
   gcc -o main main.o
   ./main
   ```
+- Path of execution files: `/bin` `/usr/bin` `/usr/local/bin`
 - Make `Makefile`: very tired to type all the commands while changing
   - `<target>`: `<parameter(s)>`
     ```
@@ -19,7 +20,13 @@
     main.o: main.c
       gcc -c main.c
     ```
-  - Shortcut: use `$@` and `$?`
+  - Marcos: use `${<name>}` after the declaration
+    ```
+    RM = /bin/rm
+    clean:
+      ${RM} -rf core *.o
+    ```
+  - Shortcuts: use `$@` and `$?`
     ```
     main: main.o
       gcc -o $@ $?
