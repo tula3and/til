@@ -7,6 +7,10 @@
 - Difference between `gcc` and `cc`: `cc` is a complier only for C lang, but `gcc` for C, C++, Java, and so on.
 - Example: complie `main.c`
   ```
+  cc main.c -o main
+  ./main
+  ```
+  ```
   gcc -c main.c
   gcc -o main main.o
   ./main
