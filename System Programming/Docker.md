@@ -13,10 +13,16 @@
 
 ## Commands
 
-- `docker ps` 실행 중인 컨테이너 목록 확인하기
-  - `-a` 종료된 컨테이너까지
+- `docker run --name <CONTAINER NAME> <IMAGE NAME>` 컨테이너 생성하기
+  - `docker run -p <HOST PORT NUM>:<CONTAINER PORT NUM> <IMAGE NAME>` 포트 포워딩: 두 개의 포트가 연결된다.
 - `docker stop <CONTAINER ID>` 컨테이너 종료하기
   - 다른 컨테이너랑 구분될 경우, `<CONTAINER ID>`의 일부만 작성해도 된다.
+  - ID 대신 NAME을 사용해도 된다.
+- `docker start <CONTAINER ID>` 존재하는 컨테이너 실행하기
+- `docker logs -f <CONTAINER ID>` 컨테이너 로그 보기
+  - `-f` 계속 로그를 볼 수 있다.
+- `docker ps` 실행 중인 컨테이너 목록 확인하기
+  - `-a` 종료된 컨테이너까지
 - `docker rm <CONTAINER ID>` 컨테이너 삭제하기
 - `docker images` 이미지 목록 확인하기
 - `docker pull <name>` 이미지 다운로드 또는 업데이트 하기
@@ -24,5 +30,7 @@
 
 ## References
 
+- [Docker Docs](https://docs.docker.com/engine/reference/run/)
 - [WSL2 설치 및 사용 방법](https://www.44bits.io/ko/post/wsl2-install-and-basic-usage)
 - [초보를 위한 도커 안내서](https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html)
+- [생활코딩 Docker 입구 수업](https://youtube.com/playlist?list=PLuHgQVnccGMDeMJsGq2O-55Ymtx0IdKWf)
