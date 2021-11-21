@@ -41,7 +41,7 @@
     - Fork → Clone → Edit → Pull request
         ```
         git clone <fork link>
-        git checkout -b <add your name>
+        git checkout -b <branch name>
         git add <changed file>
         git commit -m "<commit message>"
         git push origin <add your name>
@@ -54,10 +54,30 @@
     git remote add upstream <main source link>
     git pull upstream master
     ```
-- Delete commit history
+- Delete a branch
+    ```
+    (local) git branch -d <branch name>
+    (remote) git push origin --delete <branch name>
+    ```
+- Modify a commit message
+    ```
+    git commit --amend
+    ```
+- Delete the commit right before
     ```
     git log
     git reset HEAD^
     git push -f origin "<branch>"
     ```
-
+- Delete the first pushed commit
+    ```
+    git update-ref -d HEAD
+    git rm --cached -r
+    <add files again and write commit messages>
+    git push -f
+    ```
+- Remove current changes to a stack and delete it completely
+    ```
+    git stash
+    git stash drop
+    ```
